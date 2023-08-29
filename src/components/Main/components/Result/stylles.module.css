@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title {
+  color: '#000';
+  opacity: .3;
+}
+
+
+.icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  margin-right: -1rem;
+}
+
+.resultsWrapper {
+  display: flex;
+  gap: .2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 200;
+  min-width: 10rem;
+}
+
+.disable {
+  opacity: .5;
+}

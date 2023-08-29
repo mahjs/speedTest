@@ -1,0 +1,150 @@
+.header-navigation-menu {
+  padding-right: 1.25rem;
+}
+
+.header-navigation-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4.623rem;
+}
+
+.header-navigation-mobile-controls {
+  display: none;
+}
+
+.header-logo-container {
+  padding-left: 1.25rem;
+}
+
+.header-logo-link:hover :first-child {
+  fill: var(--light-blue);
+}
+
+.header-logo {
+  width: 9.047rem;
+  fill: var(--white);
+}
+
+.header-navigation-menu {
+  padding-right: 1.25rem;
+}
+
+.header-navigation-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation-submenu {
+  position: absolute;
+  z-index: 2;
+  background-color: var(--secondary-blue);
+  border-radius: 3px;
+  margin-top: 0.5rem;
+  width: 192px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: none;
+}
+
+.header-navigation-submenu::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background: 0 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  top: -8px;
+  left: 50%;
+  border-color: var(--secondary-blue) transparent;
+  border-width: 0 8px 8px;
+  transform: translateX(-50%);
+}
+
+.header-navigation-list-item:hover .header-navigation-submenu {
+  display: block;
+}
+
+.header-navigation-submenu-analysis {
+  width: 15.455rem;
+}
+
+.header-navigation-submenu-enterprise {
+  width: 15.755rem;
+}
+
+.header-navigation-submenu-list-item {
+  display: flex;
+  align-items: center;
+  height: 2.563rem;
+}
+
+.header-navigation-submenu-list-item-link {
+  display: flex;
+  align-items: center;
+  padding-right: 1.5rem;
+  padding-left: 1rem;
+}
+
+.header-navigation-submenu-list-item-link .header-navigation-submenu-icon {
+  margin-right: 0.5rem;
+  width: 36px;
+}
+
+.header-navigation-submenu-list-item-link .header-navigation-submenu-icon {
+  fill: var(--light-blue);
+}
+
+.header-navigation-submenu-list-item-link:hover
+  .header-navigation-submenu-icon {
+  fill: var(--white);
+}
+
+.header-navigation-submenu-list-item-link .header-navigation-submenu-text {
+  color: var(--light-blue);
+}
+
+.header-navigation-submenu-list-item-link:hover
+  .header-navigation-submenu-text {
+  color: var(--white);
+}
+
+.header-navigation-list-item {
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.header-navigation-list-item-link {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation-list-item-link:hover {
+  color: var(--light-blue);
+}
+
+.header-navigation-list-item-link:hover :first-child {
+  fill: var(--light-blue);
+}
+
+.header-navigation-list-item-link:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.header-navigation-list-item-link .user-icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: .5rem;
+  margin-top: .2rem;
+  fill: var(--white);
+}

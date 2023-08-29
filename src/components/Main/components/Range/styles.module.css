@@ -1,0 +1,44 @@
+.numberWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.number {
+  font-size: 2rem;
+  background: linear-gradient(to right, #222, #fff 50%, #222);
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 150px;
+  text-shadow: 0 0 0 rgba(255, 255, 255, .5); 
+  animation: shine 2s calc(var(--delay) + 2.5s) both;
+}
+
+.normalNumber {
+  color: rgba(255, 255, 255, .5);
+  font-size: 2rem;
+}
+
+.active {
+  color: #126AED;
+  font-size: 2rem;
+}
+
+@keyframes shine {
+  from {
+    background-position: -200px;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+    background-position: -200px;
+  }
+
+  to {
+    background-position: 200px;
+  }
+}
