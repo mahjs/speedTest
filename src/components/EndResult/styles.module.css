@@ -1,0 +1,92 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 1rem;
+  gap: 4rem;
+  position: relative;
+  border-radius: 1rem;
+  border: 1.5px solid rgba(0, 0, 0, .1);
+  margin-bottom: 2rem;
+  animation: slide-down 2s;
+}
+
+.divider {
+  position: absolute;
+  width: 40%;
+  height: .1rem;
+  background-color: #000;
+  opacity: .1;
+}
+
+.one {
+  top: 33%;
+  right: 30%;
+}
+.two {
+  top: 66%;
+  right: 30%;
+}
+
+.buttonWrapper {
+  display: flex;
+  gap: 2rem;
+  animation: slide-up 2s;
+  position: relative;
+}
+
+.btn {
+  border-radius: 2.5rem;
+  height: 4rem;
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+.shareBtn {
+  top: 33%;
+  right: 30%;
+  width: 10rem;
+  background-color: #DB7F12;
+}
+
+.retryBtn {
+  top: 66%;
+  right: 30%;
+  width: 15rem;
+  background-color: #126AED;
+}
+
+/* Animations */
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    top: -5rem;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    top: 5rem;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    top: 0;
+  }
+}

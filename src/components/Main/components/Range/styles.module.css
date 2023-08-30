@@ -20,11 +20,18 @@
 .normalNumber {
   color: rgba(255, 255, 255, .5);
   font-size: 2rem;
+  transition: all .2s;
 }
 
-.active {
-  color: #126AED;
+.activeDownload {
+  color: rgba(45,68,253,1);
   font-size: 2rem;
+  transition: all .2s;
+}
+.activeUpload {
+  color: rgba(241,21,153,1);
+  font-size: 2rem;
+  transition: all .2s;
 }
 
 @keyframes shine {

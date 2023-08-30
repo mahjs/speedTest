@@ -21,7 +21,11 @@ const Range: FC<Props> = ({ value, delay, statusValue, testStatus }) => {
       {testStatus >= 1 && (
         <span
           className={[
-            statusValue >= value ? classes.active : classes.normalNumber,
+            statusValue >= value && (testStatus === 1 || testStatus === 3)
+              ? testStatus <= 1
+                ? classes.activeDownload
+                : classes.activeUpload
+              : classes.normalNumber,
           ].join(" ")}
         >
           {toPersianDigit(value)}
