@@ -19,12 +19,14 @@ export type DataState = {
   ulStatus: string;
 };
 const useData = () => {
+  // States
   const [openTest, setOpenTest] = useState<boolean>(false);
   const [dataState, setDataState] = useState<Partial<DataState>>({});
   const [showEndResult, setShowEndResult] = useState<boolean>(false);
 
   const test = new window.Speedtest();
 
+  // Update the ui baseed on the date from test
   useEffect(() => {
     if (!openTest) return;
 
@@ -39,8 +41,9 @@ const useData = () => {
     return () => clearTimeout(timer);
   }, [openTest]);
 
+  // Clean up after the test ends
   test.onend = () => {
-    const gradientElement = document.getElementById("ringer-value-gradient");
+    const gradientElement = document.getElementById("ringerValueGradient");
     gradientElement!.style.background =
       "conic-gradient(from 222deg, rgba(27, 112, 128, .11) 0deg, rgba(27, 112, 238, .11) 0deg)";
 

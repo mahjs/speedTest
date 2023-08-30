@@ -1,6 +1,10 @@
 import { FC } from "react";
-import classes from "./styles.module.css";
+
+// Utils
 import { toPersianDigit } from "../../../../utils/numbers";
+
+// locals
+import classes from "./styles.module.css";
 
 type Props = {
   value: number;

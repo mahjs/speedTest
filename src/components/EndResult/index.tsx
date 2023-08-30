@@ -1,6 +1,8 @@
 import { FC } from "react";
 import Result from "../Main/components/Result";
 import { DataState } from "../Main/useData";
+
+// Locals
 import classes from "./styles.module.css";
 
 type Props = {

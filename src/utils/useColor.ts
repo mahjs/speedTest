@@ -10,7 +10,7 @@ export const useColor = (state: DataState) => {
       : Number(state.ulStatus) || 0
   );
 
-  const gradientElement = document.getElementById("ringer-value-gradient");
+  const gradientElement = document.getElementById("ringerValueGradient");
   const gradientBackground = `conic-gradient(from 222deg, ${
     colorPallet[0].color
   } 0deg, ${colorPallet[Math.min(rangeValue, 99)].color} ${Math.min(

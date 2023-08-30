@@ -1,25 +1,29 @@
 import { FC } from "react";
-import "./styles.css";
-import Result from "./components/Result";
-import useData from "./useData";
 import SVG from "react-inlinesvg";
+
+// Local components
 import Range from "./components/Range";
+import Result from "./components/Result";
 import EndResults from "../EndResult";
+
+// Locals
+import useData from "./useData";
+import "./styles.css";
 
 const Main: FC = () => {
   const { openTest, setOpenTest, dataState, showEndResult } = useData();
 
   return (
     <main className="main">
-      <div className="wrapper main-wrapper">
+      <div className="wrapper mainWrapper">
         {showEndResult && <EndResults dataState={dataState} />}
         {!showEndResult && (
-          <section className="main-network-test">
-            <p className="speedtest-title">تست سرعت اینترنت</p>
+          <section className="mainNetworkTest">
+            <p className="speedtestTitle">تست سرعت اینترنت</p>
             <div
               className={[
-                "results-wrapper",
-                openTest ? "enable-results" : "disable-results",
+                "resultsWrapper",
+                openTest ? "enableResults" : "disableResults",
               ].join(" ")}
             >
               <span className="divider one"></span>
@@ -47,18 +51,17 @@ const Main: FC = () => {
             </div>
 
             <div
-              className={[
-                "main-result",
-                openTest ? "slide-down-button" : "",
-              ].join(" ")}
+              className={["mainResult", openTest ? "slideDownButton" : ""].join(
+                " "
+              )}
               onClick={() => {
                 setOpenTest(true);
               }}
             >
-              <div className="connection-test-button-container">
+              <div className="connectionTestButtonContainer">
                 <div className="ring"></div>
                 <h2>
-                  <button className="connection-test-button-link text-white ">
+                  <button className="connectionTestButtonLink textWhite">
                     شروع
                   </button>
                 </h2>
@@ -68,7 +71,6 @@ const Main: FC = () => {
             {openTest && (
               <div className="cornometer">
                 <SVG src="/svg/ellipse.svg" className="ringer" />
-                {/* <SVG src="/svg/ellipse.svg" className="ringer2" /> */}
                 <SVG
                   src="/svg/vector.svg"
                   className="vector"
@@ -104,7 +106,7 @@ const Main: FC = () => {
                     testStatus={dataState.testState || 0}
                   />
                 ))}
-                <div className="speed-rate">
+                <div className="speedRate">
                   <p>
                     {dataState.testState === 1
                       ? dataState.dlStatus || "0.00"

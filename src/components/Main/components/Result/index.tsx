@@ -1,5 +1,7 @@
 import { FC } from "react";
 import SVG from "react-inlinesvg";
+
+// Locals
 import classes from "./stylles.module.css";
 
 type Props = {

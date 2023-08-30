@@ -1,6 +1,10 @@
+import SVG from "react-inlinesvg";
+
+// Local components
 import Header from "./components/Header";
 import Main from "./components/Main";
-import SVG from "react-inlinesvg";
+
+// Locals
 import "./App.css";
 
 function App() {

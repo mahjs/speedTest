@@ -1,4 +1,6 @@
 import { FC } from "react";
+
+// Locals
 import "./styles.css";
 
 const Header: FC = () => {
