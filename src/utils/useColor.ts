@@ -7,10 +7,12 @@ export const useColor = (state: DataState) => {
     state.testState <= 1 ? downloadColorsGradient : uploadColorsGradient;
 
   // Choosing the right state value for the right situation
-  const rangeValue = Math.round(
-    state.testState <= 1
-      ? Number(state.dlStatus) || 0
-      : Number(state.ulStatus) || 0
+  const rangeValue = normalizeValue(
+    Math.round(
+      state.testState <= 1
+        ? Number(state.dlStatus) || 0
+        : Number(state.ulStatus) || 0
+    )
   );
 
   const gradientElement = document.getElementById("ringerValueGradient");
@@ -34,6 +36,19 @@ export const useColor = (state: DataState) => {
 
   // Add background gradient that we create to the svg element
   gradientElement!.style.background = gradientBackground;
+  function normalizeValue(value: number): number {
+    if (value >= 50 && value < 55) {
+      return Math.ceil(value * 1.11);
+    } else if (value >= 55 && value < 70) {
+      return Math.ceil(value * 1.165);
+    } else if (value >= 70 && value < 85) {
+      return Math.ceil(value * 1.17);
+    } else if (value >= 85 && value < 95) {
+      return Math.ceil(value * 1.12);
+    } else if (value >= 95) {
+      return Math.ceil(value * 1.1);
+    } else return Math.ceil(value);
+  }
 };
 
 // We could use GSAP for a better ui too.
