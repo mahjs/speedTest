@@ -2,8 +2,11 @@ import { DataState } from "../components/Main/useData";
 import { uploadColorsGradient, downloadColorsGradient } from "./colors";
 
 export const useColor = (state: DataState) => {
+  // Choosing the right color for the right state
   const colorPallet =
     state.testState <= 1 ? downloadColorsGradient : uploadColorsGradient;
+
+  // Choosing the right state value for the right situation
   const rangeValue = Math.round(
     state.testState <= 1
       ? Number(state.dlStatus) || 0
@@ -11,6 +14,8 @@ export const useColor = (state: DataState) => {
   );
 
   const gradientElement = document.getElementById("ringerValueGradient");
+
+  // Make the right background gradient based of the choosen value and color
   const gradientBackground = `conic-gradient(from 222deg, ${
     colorPallet[0].color
   } 0deg, ${colorPallet[Math.min(rangeValue, 99)].color} ${Math.min(
@@ -21,10 +26,13 @@ export const useColor = (state: DataState) => {
     275
   )}deg)`;
 
+  // Make the background gradient back to normall when the test ends
   if (state.testState > 3) {
     gradientElement!.style.background =
       "conic-gradient(from 222deg, rgba(27, 112, 128, .11) 0deg, rgba(27, 112, 238, .11) 0deg)";
   }
+
+  // Add background gradient that we create to the svg element
   gradientElement!.style.background = gradientBackground;
 };
 
