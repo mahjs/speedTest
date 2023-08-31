@@ -16,6 +16,7 @@ const Main: FC = () => {
   return (
     <main className="main">
       <div className="wrapper mainWrapper">
+        <SVG src="/svg/ellipseGradient.svg" />
         {showEndResult && <EndResults dataState={dataState} />}
         {!showEndResult && (
           <section className="mainNetworkTest">
