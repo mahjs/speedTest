@@ -6,6 +6,8 @@
 
 ### After you clone the project run this command:
 
+#### Before you run the project you must establish a server for LibreTest, you can learn how by using its documentation from [https://github.com/librespeed/speedtest](https://github.com/librespeed/speedtest)
+
 ```sh
 npm install
 ```
